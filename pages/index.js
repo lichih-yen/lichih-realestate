@@ -46,12 +46,13 @@ function Home({ propertiesForSale, propertiesForRent }) {
         linkName="/search?purpose=for-rent"
         imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"
       />
-      <Flex flexWrap="wrap">
+      <Flex flexWrap="wrap" borderBottom="1px" borderColor="gray.100">
         {/* Fetch the properties and map over them */}
         {propertiesForRent.map((property) => (
           <Property property={property} key={property.id} />
         ))}
       </Flex>
+
       <Banner
         purpose="BUY A HOME"
         title1="Find, Buy and Own Your"
